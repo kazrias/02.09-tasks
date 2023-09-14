@@ -6,16 +6,4 @@ Function.prototype.fakeApply = function (context, args) {
   return res
 }
 
-const user = {
-  name: 'Tyom',
-  age: 23,
-  toString() {
-    return [this.name, this.age]
-  }
-}
 
-function getInfo(country, city) {
-  console.log(`${this.name} is ${this.age} years old, lives in ${city}, ${country}`);
-}
-
-getInfo.fakeApply(user, ['Armenia', 'Erevan']);
