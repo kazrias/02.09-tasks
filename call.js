@@ -1,3 +1,7 @@
-Function.prototype.fakeCall=function(obj={},){
-  
+Function.prototype.fakeCall = function (context, ...args) {
+  const uniqId = Date.now().toString() + Math.random();
+  context[uniqId] = this;
+  const res = context[uniqId](...args);
+  delete context[uniqId];
+  return res
 }
