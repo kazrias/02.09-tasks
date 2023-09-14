@@ -1,1 +1,3 @@
-test('should first', () => { second })
+Function.prototype.fakeCall=function(obj={},){
+  
+}
